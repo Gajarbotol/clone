@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Cracker</title>
+ 	    <style>
+        body {
+            background-color: #000000;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            background-color: #111111;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label, input {
+            display: block;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"], input[type="number"] {
+            background-color: #222222;
+            border: 1px solid #00FF00;
+            color: #00FF00;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            background-color: #00FF00;
+            color: #000000;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00cc00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Cracker</h1>
+    <form method="post">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="password_length">Password Length (Digits Only):</label>
+        <input type="number" id="password_length" name="password_length" required>
+
+        <label for="num_attempts">Number of Random Attempts:</label>
+        <input type="number" id="num_attempts" name="num_attempts" required>
+
+        <input type="submit" value="Start Cracking">
+    </form>
+</body>
+</html>
